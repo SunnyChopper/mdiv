@@ -8,8 +8,8 @@
                             <!-- Logo -->
                             <div class="s-header__logo">
                                 <a href="index.html" class="s-header__logo-link">
-                                    <img class="s-header__logo-img s-header__logo-img-default" src="img/logo.png" alt="Megakit Logo">
-                                    <img class="s-header__logo-img s-header__logo-img-shrink" src="img/logo-dark.png" alt="Megakit Logo">
+                                    <img class="s-header__logo-img s-header__logo-img-default" src="{{ URL::asset('img/logo.png') }}" alt="Megakit Logo">
+                                    <img class="s-header__logo-img s-header__logo-img-shrink" src="{{ URL::asset('img/logo-dark.png') }}" alt="Megakit Logo">
                                 </a>
                             </div>
                             <!-- End Logo -->

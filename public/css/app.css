@@ -1,0 +1,84 @@
+/* ------------------------ *\
+	Theme Overrides
+\* ------------------------ */
+
+.banner-area {
+	height: 35vh;
+	background-size: cover !important;
+}
+
+/* ------------------------ *\
+	Custom Text
+\* ------------------------ */
+
+#main-banner-subtitle {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.banner-title {
+	margin-top: 15vh;
+}
+
+.card-footer > h5 {
+	color: white;
+	margin-bottom: 8px;
+}
+
+.card-footer > a {
+	color: white;
+	background-color: #d82a4e;
+	padding: 4px 16px;
+}
+
+@media only screen and (max-width: 575px) {
+	.banner-title {
+		margin-top: 0px;
+	}
+}
+
+/* ------------------------ *\
+	Custom Divs
+\* ------------------------ */
+
+.background-card {
+	width: 100%;
+	padding-top: 56.25%;
+	position: relative;
+	background-size: cover;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border-radius: 8px;
+}
+
+.card-overlay {
+	position: absolute;
+	border-radius: 8px;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000',GradientType=0);
+}
+
+.card-overlay > .card-footer {
+	bottom: 0px;
+    position: absolute;
+    color: white;
+    padding: 24px;
+}
+
+
+.gray-box {
+	background-color: hsl(0, 0%, 97.5%);
+	padding: 32px;
+	border-radius: 8px;
+	border-bottom: 3px solid hsl(0, 0%, 80%);
+}
+
+/* ------------------------ *\
+	Custom Buttons
+\* ------------------------ */

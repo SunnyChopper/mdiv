@@ -26,3 +26,5 @@
 <script type="text/javascript" src="{{ URL::asset('js/components/google-map.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/components/wow.min.js') }}"></script>
 <!--========== END JAVASCRIPTS ==========-->
+
+@yield('page_js')
