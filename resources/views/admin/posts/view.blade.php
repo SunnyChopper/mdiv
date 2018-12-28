@@ -44,13 +44,13 @@
 
 			</div>
 			@else
-				<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-12">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 					<div class="gray-box">
 						<h3 class="text-center">No Blog Posts</h3>
 						<p class="text-center">Click on the button below to get started on your first post.</p>
 						<div class="row">
 							<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12 col-12">
-								<a href="/admin/posts/new" class="site-btn-small center-button">New Blog Post</a>
+								<a href="/admin/posts/new" class="btn btn-primary center-button">New Blog Post</a>
 							</div>
 						</div>
 					</div>
