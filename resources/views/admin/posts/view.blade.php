@@ -9,7 +9,7 @@
 			@if(count($posts) > 0)
 			
 			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
-				<a href="/admin/posts/new" class="btn btn-primary mb-32">Create New Post</a>
+				
 				<div style="overflow: auto;">
 					<table class="table table-striped">
 						<thead>
@@ -40,6 +40,7 @@
 					</table>
 				</div>
 
+				<a href="/admin/posts/new" class="btn btn-primary centered mt-32">Create New Post</a>
 
 			</div>
 			@else

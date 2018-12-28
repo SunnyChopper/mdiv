@@ -29,16 +29,6 @@ Route::post('/admin/posts/delete', 'BlogPostsController@delete');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-// Blog Post functions
-Route::get('/blog', 'BlogPostsController@blog');
-Route::get('/post/{post_id}/{slug}', 'BlogPostsController@read');
-Route::get('/admin/posts/view', 'BlogPostsController@view_blog_posts');
-Route::get('/admin/posts/edit/{post_id}', 'BlogPostsController@edit_blog_post');
-Route::get('/admin/posts/new', 'BlogPostsController@new_blog_post');
-Route::post('/admin/posts/create', 'BlogPostsController@create');
-Route::post('/admin/posts/update', 'BlogPostsController@update');
-Route::post('/admin/posts/delete', 'BlogPostsController@delete');
 // Blog Post functions
 Route::get('/blog', 'BlogPostsController@blog');
 Route::get('/post/{post_id}/{slug}', 'BlogPostsController@read');

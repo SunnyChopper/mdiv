@@ -197,6 +197,204 @@
 }
 
 /* ------------------------ *\
+	Padding
+\* ------------------------ */
+
+.p-0 {
+	padding: 0px;
+}
+
+.p-2 {
+	padding: 2px;
+}
+
+.p-4 {
+	padding: 4px;
+}
+
+.p-8 {
+	padding: 8px;
+}
+
+.p-16 {
+	padding: 16px;
+}
+
+.p-32 {
+	padding: 32px;
+}
+
+.p-64 {
+	padding: 64px;
+}
+
+.p-128 {
+	padding: 128px;
+}
+
+.pt-0 {
+	padding-top: 0px;
+}
+
+.pt-2 {
+	padding-top: 2px;
+}
+
+.pt-4 {
+	padding-top: 4px;
+}
+
+.pt-8 {
+	padding-top: 8px;
+}
+
+.pt-16 {
+	padding-top: 16px;
+}
+
+.pt-32 {
+	padding-top: 32px;
+}
+
+.pt-64 {
+	padding-top: 64px;
+}
+
+.pt-128 {
+	padding-top: 128px;
+}
+
+.pb-0 {
+	padding-bottom: 0px;
+}
+
+.pb-2 {
+	padding-bottom: 2px;
+}
+
+.pb-4 {
+	padding-bottom: 4px;
+}
+
+.pb-8 {
+	padding-bottom: 8px;
+}
+
+.pb-16 {
+	padding-bottom: 16px;
+}
+
+.pb-32 {
+	padding-bottom: 32px;
+}
+
+.pb-64 {
+	padding-bottom: 64px;
+}
+
+.pb-128 {
+	padding-bottom: 128px;
+}
+
+@media only screen and (max-width: 575px) {
+	.p-0-mobile {
+		padding: 0px;
+	}
+
+	.p-2-mobile {
+		padding: 2px;
+	}
+
+	.p-4-mobile {
+		padding: 4px;
+	}
+
+	.p-8-mobile {
+		padding: 8px;
+	}
+
+	.p-16-mobile {
+		padding: 16px;
+	}
+
+	.p-32-mobile {
+		padding: 32px;
+	}
+
+	.p-64-mobile {
+		padding: 64px;
+	}
+
+	.p-128-mobile {
+		padding: 128px;
+	}
+
+	.pt-0-mobile {
+		padding-top: 0px;
+	}
+
+	.pt-2-mobile {
+		padding-top: 2px;
+	}
+
+	.pt-4-mobile {
+		padding-top: 4px;
+	}
+
+	.pt-8-mobile {
+		padding-top: 8px;
+	}
+
+	.pt-16-mobile {
+		padding-top: 16px;
+	}
+
+	.pt-32-mobile {
+		padding-top: 32px;
+	}
+
+	.pt-64-mobile {
+		padding-top: 64px;
+	}
+
+	.pt-128-mobile {
+		padding-top: 128px;
+	}
+
+	.pb-0-mobile {
+		padding-bottom: 0px;
+	}
+
+	.pb-2-mobile {
+		padding-bottom: 2px;
+	}
+
+	.pb-4-mobile {
+		padding-bottom: 4px;
+	}
+
+	.pb-8-mobile {
+		padding-bottom: 8px;
+	}
+
+	.pb-16-mobile {
+		padding-bottom: 16px;
+	}
+
+	.pb-32-mobile {
+		padding-bottom: 32px;
+	}
+
+	.pb-64-mobile {
+		padding-bottom: 64px;
+	}
+
+	.pb-128-mobile {
+		padding-bottom: 128px;
+	}
+}
+
+/* ------------------------ *\
 	Colors
 \* ------------------------ */
 
@@ -224,7 +422,13 @@
 	Positioning
 \* ------------------------ */
 
-.center-button {
+.center-content {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+}
+
+.centered {
 	display: block;
 	width: fit-content;
 	margin-right: auto;

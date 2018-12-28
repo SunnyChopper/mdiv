@@ -5,7 +5,7 @@
 
 	<div class="container mt-64 mb-64">
 		<div class="row">
-			<div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-12 col-xs-12">
+			<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				<ul class="list-group">
 					@foreach ($posts as $post)
 					<li class="list-group-item p-32 blog-entry">

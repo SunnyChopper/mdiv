@@ -2,6 +2,16 @@
 	Theme Overrides
 \* ------------------------ */
 
+p {
+	font-size: 18px;
+	line-height: 1.5em;
+}
+
+img.shadow {
+	-webkit-box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.2); 
+	box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.2);
+}
+
 .banner-area {
 	height: 35vh;
 	background-size: cover !important;
@@ -41,6 +51,26 @@
 	Custom Divs
 \* ------------------------ */
 
+.icon-box > i {
+	font-size: 64px;
+}
+
+.image-box {
+	background: white;
+	-webkit-box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.2); 
+	box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.2);
+}
+
+.image-box > .image-box-image {
+	width: 100%;
+	height: 175px;
+	background-size: cover;
+}
+
+.image-box > .image-box-info {
+	padding: 16px;
+}
+
 .background-card {
 	width: 100%;
 	padding-top: 56.25%;
@@ -79,6 +109,23 @@
 	border-bottom: 3px solid hsl(0, 0%, 80%);
 }
 
+@media only screen and (max-width: 575px) {
+
+	.image-box {
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+
+	.icon-box {
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+}
+
 /* ------------------------ *\
-	Custom Buttons
+	Custom Rows
 \* ------------------------ */
+
+.theme-row {
+	background-color: #222324;
+}

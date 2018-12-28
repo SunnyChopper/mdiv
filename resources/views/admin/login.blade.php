@@ -19,10 +19,8 @@
 							<input type="password" class="form-control" name="password" required>
 						</div>
 
-						<div class="row">
-							<div class='col-12'>
-								<input type="submit" class="btn btn-primary center-button">
-							</div>
+						<div class="form-group">
+							<input type="submit" class="btn btn-primary center-button">
 						</div>
 					</form>
 				</div>
