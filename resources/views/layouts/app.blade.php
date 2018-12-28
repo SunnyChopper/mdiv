@@ -31,14 +31,14 @@
         <link href="{{ URL::asset('vendor/cubeportfolio/css/cubeportfolio.min.css') }}" rel="stylesheet" type="text/css"/>
 
         <!-- Theme Styles -->
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('css/global/global.css') }}" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"/>
-        <link href="{{ asset('css/layouts.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ URL::asset('css/global/global.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css"/>
+        <link href="{{ URL::asset('css/layouts.css') }}" rel="stylesheet" type="text/css"/>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}" type="image/x-icon">
-        <link rel="apple-touch-icon" href="{{ URL::asset('img/apple-touch-icon.png') }}">
+        {{-- <link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}" type="image/x-icon">
+        <link rel="apple-touch-icon" href="{{ URL::asset('img/apple-touch-icon.png') }}"> --}}
     </head>
     <!-- End Head -->
 

@@ -4,11 +4,11 @@
     @include('layouts.banner')
     <div class="container mt-64 mb-64">
         <div class="row justify-content-center">
-            <div class="col-lg-7 order-lg-1 col-md-7 order-md-1 col-sm-12 order-sm-2 col-12 order-2">
-                <h2 class="text-center-mobile mb-32 mt-32-mobile">What You Get By Joining Today</h2>
+            <div class="col-lg-7 order-lg-1 col-md-7 order-md-1 col-sm-12 order-sm-2 col-12 order-2 mb-32-mobile">
+                <h2 class="text-center-mobile mb-32">What You Get By Joining Today</h2>
                 <hr class="d-md-none">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="image-box-edge">
                             <div class="image-box-image set-bg" data-setbg="https://teaching.temple.edu/sites/tlc/files/styles/featured_image/public/edvice/e-learning2.png?itok=5k8XlikG&c=2ce558713a25e2f5d90f8c11f8047eff"></div>
                             <div class="image-box-info">
@@ -18,7 +18,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="image-box-edge">
                             <div class="image-box-image set-bg" data-setbg="https://images.idgesg.net/images/article/2017/10/wireless_network_internet_of_things_iot_thinkstock_853701554-100739367-large.jpg"></div>
                             <div class="image-box-info">
@@ -27,8 +27,9 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="image-box-edge">
                             <div class="image-box-image set-bg" data-setbg="https://ontargetinteractive.com/wp-content/uploads/2012/03/content.png"></div>
                             <div class="image-box-info">
@@ -38,7 +39,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="image-box-edge">
                             <div class="image-box-image set-bg" data-setbg="http://culturalbrilliance.com/wp-content/uploads/2016/11/community-144653342.jpg"></div>
                             <div class="image-box-info">
