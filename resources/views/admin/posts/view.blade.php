@@ -49,8 +49,8 @@
 						<h3 class="text-center">No Blog Posts</h3>
 						<p class="text-center">Click on the button below to get started on your first post.</p>
 						<div class="row">
-							<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12 col-12">
-								<a href="/admin/posts/new" class="btn btn-primary center-button">New Blog Post</a>
+							<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-12">
+								<a href="/admin/posts/new" class="btn btn-primary centered">New Blog Post</a>
 							</div>
 						</div>
 					</div>
