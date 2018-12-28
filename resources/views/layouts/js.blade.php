@@ -21,7 +21,7 @@
 <script type="text/javascript" src="{{ URL::asset('js/components/swiper.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/components/counter.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/components/portfolio-3-col.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/components/parallax.min.js') }}"></script>>
+<script type="text/javascript" src="{{ URL::asset('js/components/parallax.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/components/wow.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
 <!--========== END JAVASCRIPTS ==========-->
