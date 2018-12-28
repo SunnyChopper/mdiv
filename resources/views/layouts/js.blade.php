@@ -3,7 +3,6 @@
 <script type="text/javascript" src="{{ URL::asset('vendor/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('vendor/jquery.migrate.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('vendor/jquery.smooth-scroll.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('vendor/jquery.back-to-top.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('vendor/scrollbar/jquery.scrollbar.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
@@ -22,8 +21,7 @@
 <script type="text/javascript" src="{{ URL::asset('js/components/swiper.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/components/counter.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/components/portfolio-3-col.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/components/parallax.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/components/google-map.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/components/parallax.min.js') }}"></script>>
 <script type="text/javascript" src="{{ URL::asset('js/components/wow.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
 <!--========== END JAVASCRIPTS ==========-->
