@@ -37,8 +37,18 @@
         <link href="{{ URL::asset('css/layouts.css') }}" rel="stylesheet" type="text/css"/>
 
         <!-- Favicon -->
-        {{-- <link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}" type="image/x-icon">
-        <link rel="apple-touch-icon" href="{{ URL::asset('img/apple-touch-icon.png') }}"> --}}
+        <link rel="shortcut icon" href="{{ URL::asset('img/favicon.png') }}">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131372255-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-131372255-2');
+        </script>
+
     </head>
     <!-- End Head -->
 
