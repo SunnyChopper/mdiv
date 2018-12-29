@@ -8,11 +8,13 @@
                         <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
                             <li><a class="g-font-size-15--xs g-color--white-opacity" href="/">Home</a></li>
                             <li><a class="g-font-size-15--xs g-color--white-opacity" href="/blog">Blog</a></li>
+                            <li><a class="g-font-size-15--xs g-color--white-opacity" href="/contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
                         <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                            <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.instagram.com/millionairedivision">Instagram</a></li>
+                            <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.instagram.com/millionairedivision"><i class="fab fa-instagram" style="margin-right: 4px;"></i> Instagram</a></li>
+                            <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.instagram.com/millionairedivision"><i class="fab fa-twitter" style="margin-right: 4px;"></i> Twitter</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-2 g-margin-b-40--xs g-margin-b-0--md">
@@ -38,7 +40,7 @@
                     </a>
                 </div>
                 <div class="col-xs-6 g-text-right--xs">
-                    <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light">Copyright &copy; 2019 Millionaire Division</p>
+                    <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light">Copyright &copy; 2019</p>
                 </div>
             </div>
         </div>

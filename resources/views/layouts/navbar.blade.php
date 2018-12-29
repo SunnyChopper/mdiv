@@ -8,8 +8,8 @@
                     <!-- Logo -->
                     <div class="s-header__logo">
                         <a href="/" class="s-header__logo-link">
-                            <img class="s-header__logo-img s-header__logo-img-default" src="{{ URL::asset('img/logo.png') }}" alt="Megakit Logo">
-                            <img class="s-header__logo-img s-header__logo-img-shrink" src="{{ URL::asset('img/logo-dark.png') }}" alt="Megakit Logo">
+                            <img class="s-header__logo-img s-header__logo-img-default" src="{{ URL::asset('img/logo.png') }}" alt="New Age Startup Logo">
+                            <img class="s-header__logo-img s-header__logo-img-shrink" src="{{ URL::asset('img/logo-dark.png') }}" alt="New Age Startup Logo">
                         </a>
                     </div>
                     <!-- End Logo -->
@@ -39,6 +39,7 @@
                     <ul class="list-unstyled s-header__nav-menu">
                         <li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="/">Home</a></li>
                         <li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="/blog">Blog</a></li>
+                        <li class="s-header__nav-menu-item"><a class="s-header__nav-menu-link s-header__nav-menu-link-divider" href="/contact">Contact</a></li>
                     </ul>
                     <!-- End Menu List -->
                 @elseif(session()->has('admin_login'))
@@ -61,6 +62,11 @@
                 <a class="s-header__action-link" href="https://www.instagram.com/millionairedivision">
                     <i class="g-padding-r-5--xs ti-instagram"></i>
                     <span class="g-display-none--xs g-display-inline-block--sm">Instagram</span>
+                </a>
+
+                <a class="s-header__action-link" href="https://www.twitter.com/newagestartup">
+                    <i class="g-padding-r-5--xs ti-twitter"></i>
+                    <span class="g-display-none--xs g-display-inline-block--sm">Twitter</span>
                 </a>
             </li>
         </ul>
