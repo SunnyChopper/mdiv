@@ -6,6 +6,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="google-site-verification" content="uuVwDVi5RYZV9C7hpyVP2fjPN7DpIAGjT1-Js-b-bIw" />
 
         @if(isset($page_title))
             <title>{{ $page_title }} - {{ env('APP_NAME') }}</title>
