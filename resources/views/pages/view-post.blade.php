@@ -9,10 +9,75 @@
 				<img src="{{ $post->featured_image_url }}" class="regular-image">
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<div class="gray-box mb-32">
+					<form action="/newsletter/general/signup" method="post">
+						{{ csrf_field() }}
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<h5 class="text-center">Join Others in Getting Exclusive Email Content</h5>
+								<hr />
+							</div>
+
+							<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mb-16 mb-0-desktop">
+								<input type="text" name="first_name" placeholder="First Name" class="form-control" required>
+							</div>
+
+							<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mb-16 mb-0-desktop">
+								<input type="text" name="last_name" placeholder="Last Name" class="form-control" required>
+							</div>
+
+							<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mb-16 mb-0-desktop">
+								<input type="email" name="email" placeholder="Email" class="form-control" required>
+							</div>
+
+							<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+								<input type="submit" value="Get Access" class="centered btn btn-primary" required>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
 				<div id="post-body">
 					{!! $post->body !!}
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+				<div class="gray-box mt-16 mb-32">
+					<form action="/newsletter/general/signup" method="post">
+						{{ csrf_field() }}
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<h5 class="text-center">Join Others in Getting Exclusive Email Content</h5>
+								<hr />
+							</div>
+
+							<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mb-16 mb-0-desktop">
+								<input type="text" name="first_name" placeholder="First Name" class="form-control" required>
+							</div>
+
+							<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mb-16 mb-0-desktop">
+								<input type="text" name="last_name" placeholder="Last Name" class="form-control" required>
+							</div>
+
+							<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mb-16 mb-0-desktop">
+								<input type="email" name="email" placeholder="Email" class="form-control" required>
+							</div>
+
+							<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+								<input type="submit" value="Get Access" class="centered btn btn-primary" required>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

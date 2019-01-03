@@ -13,7 +13,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "cartalyst/stripe-billing-laravel": "8.0.0"
+        "spatie/laravel-newsletter": "^4.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

@@ -11,10 +11,16 @@
 |
 */
 
+// Public pages
 Route::get('/', 'PagesController@index');
 Route::get('/contact', 'PagesController@contact');
 Route::post('/contact/submit', 'PagesController@submit_contact');
 
+// Newsletter
+Route::post('/newsletter/general/signup', 'NewsletterController@general');
+Route::get('/newsletter/thank-you', 'NewsletterController@thank_you');
+
+// Admin backend functions
 Route::get('/admin', 'AdminController@index');
 Route::post('/admin/login', 'AdminController@authenticate_user');
 Route::get('/admin/dashboard', 'AdminController@dashboard');

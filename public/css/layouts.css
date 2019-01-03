@@ -196,7 +196,104 @@
 	}
 }
 
-/* ------------------------ *\
+@media only screen and (min-width: 768px) {
+	.m-0-desktop {
+		margin: 0px;
+	}
+
+	.m-2-desktop {
+		margin: 2px;
+	}
+
+	.m-4-desktop {
+		margin: 4px;
+	}
+
+	.m-8-desktop {
+		margin: 8px;
+	}
+
+	.m-16-desktop {
+		margin: 16px;
+	}
+
+	.m-32-desktop {
+		margin: 32px;
+	}
+
+	.m-64-desktop {
+		margin: 64px;
+	}
+
+	.m-128-desktop {
+		margin: 128px;
+	}
+
+	.mt-0-desktop {
+		margin-top: 0px;
+	}
+
+	.mt-2-desktop {
+		margin-top: 2px;
+	}
+
+	.mt-4-desktop {
+		margin-top: 4px;
+	}
+
+	.mt-8-desktop {
+		margin-top: 8px;
+	}
+
+	.mt-16-desktop {
+		margin-top: 16px;
+	}
+
+	.mt-32-desktop {
+		margin-top: 32px;
+	}
+
+	.mt-64-desktop {
+		margin-top: 64px;
+	}
+
+	.mt-128-desktop {
+		margin-top: 128px;
+	}
+
+	.mb-0-desktop {
+		margin-bottom: 0px;
+	}
+
+	.mb-2-desktop {
+		margin-bottom: 2px;
+	}
+
+	.mb-4-desktop {
+		margin-bottom: 4px;
+	}
+
+	.mb-8-desktop {
+		margin-bottom: 8px;
+	}
+
+	.mb-16-desktop {
+		margin-bottom: 16px;
+	}
+
+	.mb-32-desktop {
+		margin-bottom: 32px;
+	}
+
+	.mb-64-desktop {
+		margin-bottom: 64px;
+	}
+
+	.mb-128-desktop {
+		margin-bottom: 128px;
+	}
+}
+
 	Padding
 \* ------------------------ */
 
@@ -503,4 +600,125 @@
 .regular-image {
 	width: 100%;
 	height: auto;
+}
+
+.regular-image-100 {
+	width: 100%;
+	height: auto;
+}
+
+.regular-image-90 {
+	width: 90%;
+	height: auto;
+}
+
+.regular-image-80 {
+	width: 80%;
+	height: auto;
+}
+
+.regular-image-70 {
+	width: 70%;
+	height: auto;
+}
+
+.regular-image-60 {
+	width: 60%;
+	height: auto;
+}
+
+.regular-image-50 {
+	width: 50%;
+	height: auto;
+}
+
+.regular-image-40 {
+	width: 40%;
+	height: auto;
+}
+
+.regular-image-30 {
+	width: 30%;
+	height: auto;
+}
+
+.regular-image-20 {
+	width: 20%;
+	height: auto;
+}
+
+.regular-image-10 {
+	width: 10%;
+	height: auto;
+}
+
+@media only screen and (max-width: 575px) {
+	.regular-image-100-mobile {
+		width: 100%;
+		height: auto;
+	}
+
+	.regular-image-90-mobile {
+		width: 90%;
+		height: auto;
+	}
+
+	.regular-image-80-mobile {
+		width: 80%;
+		height: auto;
+	}
+
+	.regular-image-70-mobile {
+		width: 70%;
+		height: auto;
+	}
+
+	.regular-image-60-mobile {
+		width: 60%;
+		height: auto;
+	}
+
+	.regular-image-50-mobile {
+		width: 50%;
+		height: auto;
+	}
+
+	.regular-image-40-mobile {
+		width: 40%;
+		height: auto;
+	}
+
+	.regular-image-30-mobile {
+		width: 30%;
+		height: auto;
+	}
+
+	.regular-image-20-mobile {
+		width: 20%;
+		height: auto;
+	}
+
+	.regular-image-10-mobile {
+		width: 10%;
+		height: auto;
+	}
+}
+
+/* -------------------------- *\
+	Custom Video
+\* -------------------------- */
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
