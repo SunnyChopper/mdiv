@@ -32,7 +32,10 @@ img.shadow {
 
 .card-footer > h5 {
 	color: white;
-	margin-bottom: 8px;
+}
+
+.card-footer > p > small {
+	color: white;
 }
 
 .card-footer > a {

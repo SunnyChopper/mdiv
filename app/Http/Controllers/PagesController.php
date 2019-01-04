@@ -8,6 +8,8 @@ use App\Custom\BlogPostHelper;
 
 use Mail;
 
+use App\User;
+
 class PagesController extends Controller
 {
     public function index() {
@@ -42,5 +44,17 @@ class PagesController extends Controller
     	});
 
     	return redirect()->back()->with('success', 'Successfully submitted.');
+    }
+
+    public function profile($user_id) {
+        // Get user
+        $user = User::find($user_id);
+
+        // Dynamic page features
+        $page_header = $user->first_name . " " . $user->last_name;
+        $page_title = $page_header;
+
+        // Return view
+        return view('pages.profile')->with('page_title', $page_title)->with('page_header', $page_header)->with('user', $user);
     }
 }

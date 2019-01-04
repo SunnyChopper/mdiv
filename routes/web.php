@@ -15,6 +15,7 @@
 Route::get('/', 'PagesController@index');
 Route::get('/contact', 'PagesController@contact');
 Route::post('/contact/submit', 'PagesController@submit_contact');
+Route::get('/profile/{user_id}', 'PagesController@profile');
 
 // Newsletter
 Route::post('/newsletter/general/signup', 'NewsletterController@general');
