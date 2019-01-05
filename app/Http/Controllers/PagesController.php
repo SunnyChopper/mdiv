@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Custom\BlogPostHelper;
+use App\Custom\ProjectBoardHelper;
 
 use Mail;
 
@@ -54,7 +55,11 @@ class PagesController extends Controller
         $page_header = $user->first_name . " " . $user->last_name;
         $page_title = $page_header;
 
+        // Get project boards
+        $project_board_helper = new ProjectBoardHelper();
+        $boards = $project_board_helper->get_all_from_user($user_id);
+
         // Return view
-        return view('pages.profile')->with('page_title', $page_title)->with('page_header', $page_header)->with('user', $user);
+        return view('pages.profile')->with('page_title', $page_title)->with('page_header', $page_header)->with('user', $user)->with('boards', $boards);
     }
 }

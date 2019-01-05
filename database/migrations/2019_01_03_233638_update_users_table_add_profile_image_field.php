@@ -14,7 +14,7 @@ class UpdateUsersTableAddProfileImageField extends Migration
     public function up()
     {
         Schema::table('users', function(Blueprint $table) {
-            $table->string('profile_image_url', 256)->nullable();
+            $table->string('profile_image_url', 256)->nullable()->default('https://www.newagestartup.com/img/default-profile.jpg');
         });
     }
 

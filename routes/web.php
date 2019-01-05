@@ -39,4 +39,13 @@ Route::post('/admin/posts/create', 'BlogPostsController@create');
 Route::post('/admin/posts/update', 'BlogPostsController@update');
 Route::post('/admin/posts/delete', 'BlogPostsController@delete');
 
+// Member functions
+Route::get('/profile/edit/{user_id}', 'MembersController@edit_profile');
+Route::post('/profile/update', 'MembersController@update_profile');
+Route::get('/members/dashboard/', 'MembersController@dashboard');
+
+// Project board functions
+Route::get('/members/project-board/', 'ProjectBoardController@view_boards');
+Route::get('/members/project-board/view/{post_id}', 'ProjectBoardController@view_post');
+
 Auth::routes();

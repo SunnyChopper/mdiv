@@ -34,9 +34,9 @@ class UpdateUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('name');
-            $table->dropColumn('first_name', 64);
-            $table->dropColumn('last_name', 64);
-            $table->dropColumn('username', 128);
+            $table->dropColumn('first_name');
+            $table->dropColumn('last_name');
+            $table->dropColumn('username');
             $table->dropColumn('last_login_time');
             $table->dropColumn('num_logins');
             $table->dropColumn('backend_auth');

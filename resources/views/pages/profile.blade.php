@@ -6,13 +6,43 @@
 	<div class="container mt-64 mb-64 mt-32-mobile mb-32-mobile">
 		<div class="row">
 			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
-				<img src="https://sunnychopper.com/img/Profile.jpg" class="regular-image">
+				<img src="{{ $user->profile_image_url }}" class="regular-image">
 				<div class="hidden-sm hidden-xs">
 					<h3 class="mt-16 mb-0">{{ $user->first_name }} {{ $user->last_name }}</h3>
 					<p>Joined on {{ $user->created_at->format('M jS, Y') }}</p>
+					@if(Auth::id() == $user->id)
+						<p class="mb-0"><small><a href="/profile/edit/{{ $user->id }}"><i class="fas fa-pencil-alt" style="margin-right: 0.5em;"></i> Edit Profile</a></small></p>
+					@endif
+
 					<hr />
-					<p class="mb-0"><small><a href="https://www.facebook.com/SunnyChopper"><i class="fab fa-facebook" style="margin-right: 0.5em;"></i> Facebook</a></small></p>
-					<p class="mb-0"><small><a href="https://www.twitter.com/SunnyChopper"><i class="fab fa-twitter" style="margin-right: 0.5em;"></i> Twitter</a></small></p>
+
+					@if($user->facebook_link != "")
+						<p class="mb-0"><small><a href="{{ $user->facebook_link }}"><i class="fab fa-facebook" style="margin-right: 0.5em;"></i> Facebook</a></small></p>
+					@endif
+
+					@if($user->twitter_link != "")
+						<p class="mb-0"><small><a href="{{ $user->twitter_link }}"><i class="fab fa-twitter" style="margin-right: 0.5em;"></i> Twitter</a></small></p>
+					@endif
+
+					@if($user->instagram_link != "")
+						<p class="mb-0"><small><a href="{{ $user->instagram_link }}"><i class="fab fa-instagram" style="margin-right: 0.5em;"></i> Instagram</a></small></p>
+					@endif
+
+					@if($user->youtube_link != "")
+						<p class="mb-0"><small><a href="{{ $user->youtube_link }}"><i class="fab fa-youtube" style="margin-right: 0.5em;"></i> YouTube</a></small></p>
+					@endif
+
+					@if($user->github_link != "")
+						<p class="mb-0"><small><a href="{{ $user->github_link }}"><i class="fab fa-github" style="margin-right: 0.5em;"></i> Github</a></small></p>
+					@endif
+
+					@if($user->dribbble_link != "")
+						<p class="mb-0"><small><a href="{{ $user->dribbble_link }}"><i class="fab fa-dribbble" style="margin-right: 0.5em;"></i> Dribbble</a></small></p>
+					@endif
+
+					@if($user->website_link != "")
+						<p class="mb-0"><small><a href="{{ $user->website_link }}"><i class="fas fa-link" style="margin-right: 0.5em;"></i> Website</a></small></p>
+					@endif
 				</div>
 			</div>
 
@@ -25,21 +55,30 @@
 
 			<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 mt-32-mobile">
 				<div class="gray-box">
-					<h4>Project Board</h4>
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-							<a href="">
-								<div class="background-card set-bg" data-setbg="https://www.gannett-cdn.com/presto/2018/11/21/PBRE/34005a52-eb04-4a88-b46b-b8d238b8b131-dragonliftoff_2.jpg">
-									<div class="card-overlay">
-										<div class="card-footer">
-											<h5 class="mb-0">Rocket Simulator Game</h5>
-											<p class="white mb-0 mt-0"><small>January 3rd, 2018</small></p>
+					@if(count($boards) == 0)
+						<p class="mb-0 text-center">No activity yet...</p>
+					@endif
+
+					@if(count($boards) > 0)
+						<h4>Project Board</h4>
+						<div class="row">
+							@foreach($boards as $board)
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+									<a href="/members/project-board/view/{{ $board->id }}">
+										<div class="background-card set-bg" data-setbg="{{ $board->featured_image_url }}">
+											<div class="card-overlay">
+												<div class="card-footer">
+													<h5 class="mb-0">{{ $board->title }}</h5>
+													<p class="white mb-0 mt-0"><small>{{ $board->created_at->format('M jS, Y') }}</small></p>
+												</div>
+											</div>
 										</div>
-									</div>
+									</a>
 								</div>
-							</a>
+							@endforeach
 						</div>
-					</div>
+						<hr />
+					@endif
 				</div>
 			</div>
 		</div>
