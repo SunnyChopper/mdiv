@@ -36,11 +36,13 @@
 			</div>
 		</div>
 
-		{{-- <div class="row mt-32">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<a href="" class="btn btn-primary centered">Join for Free <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+		@if(Auth::guest())
+			<div class="row mt-32">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<a href="" class="btn btn-primary centered">Join for Free <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+				</div>
 			</div>
-		</div> --}}
+		@endif
 	</div>
 
 	<div class="theme-row p-64 p-16-mobile pt-64-mobile pb-64-mobile">
@@ -53,11 +55,13 @@
 			</div>
 		</div>
 
-		{{-- <div class="row mt-16">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<a href="" class="btn btn-primary centered">Achieve My Goals <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+		@if(Auth::guest())
+			<div class="row mt-16">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<a href="" class="btn btn-primary centered">Achieve My Goals <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+				</div>
 			</div>
-		</div> --}}
+		@endif
 	</div>
 
 	@if(count($posts) >= 3)
@@ -92,10 +96,12 @@
 			</div>
 
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin: auto;">
-				<h3 class="mt-16	-mobile">Not sure which online business you should start?</h3>
-				<p>Every single person is different. What works for one person may not work for another. We all have different personalities and often enough we are attempting to start businesses that don't align with our natural personalities. <b>That's where our free Online Business Explorer Tool can help you.</b></p>
-				<p>Simply sign up and take a quiz. It will tell you which type of online business you should start based on your answers. It will also give you some example businesses to look at for inspiration and ideas.</p>
-				{{-- <a href="" class="btn btn-primary mt-16">Get Access</a> --}}
+				<h3 class="mt-16-mobile">Looking for co-founders and team members for your online business?</h3>
+				<p>Building something big requires having a team. No one has ever built something big by themselves. However, finding co-founders or team members can be extremely difficult. That's what we aim to help with. <b>With the ProjectBoard tool, you can share your business with others and find co-founders and team members.</b></p>
+				<p>Simply sign up, fill out your profile, and add your first board. </p>
+				@if(Auth::guest())
+					<a href="/register" class="btn btn-primary mt-16">Get Access</a>
+				@endif
 			</div>
 		</div>
 	</div>
