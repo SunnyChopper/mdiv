@@ -45,7 +45,12 @@ Route::post('/profile/update', 'MembersController@update_profile');
 Route::get('/members/dashboard/', 'MembersController@dashboard');
 
 // Project board functions
-Route::get('/members/project-board/', 'ProjectBoardController@view_boards');
+Route::get('/members/project-board/view', 'ProjectBoardController@view_boards');
 Route::get('/members/project-board/view/{post_id}', 'ProjectBoardController@view_post');
+Route::get('/members/project-board/new', 'ProjectBoardController@new_post');
+Route::post('/members/project-board/create', 'ProjectBoardController@create');
+Route::get('/members/project-board/my', 'ProjectBoardController@my_posts');
+Route::get('/members/project-board/edit/{post_id}', 'ProjectBoardController@edit_post');
+Route::post('/members/project-board/update', 'ProjectBoardController@update');
 
 Auth::routes();

@@ -13,7 +13,14 @@ use App\Custom\UploadHelper;
 class MembersController extends Controller
 {
     public function dashboard() {
+        $this->protect_members_area();
 
+        // Dynamic page elements
+        $page_header = "Dashboard";
+        $page_title = $page_header;
+
+        // Return view
+        return view('members.dashboard')->with('page_header', $page_header)->with('page_title', $page_title);
     }
 
     public function edit_profile($user_id) {
@@ -58,7 +65,7 @@ class MembersController extends Controller
     			if ($data->hasFile('profile_image')) {
     				$upload_helper = new UploadHelper();
     				$profile_image = $data->file('profile_image');
-    				$file_path = "profile/" . $user->id . "/profile-image" . $profile_image->getClientOriginalExtension();
+    				$file_path = "users/" . $user->id . "/profile-image" . $profile_image->getClientOriginalExtension();
     				$image_url = $upload_helper->upload_to_s3($profile_image, $file_path);
     				$user->profile_image_url = $image_url;
     			}
@@ -80,5 +87,12 @@ class MembersController extends Controller
     			return redirect()->back();
     		}
     	}
+    }
+
+    /* Private functions */
+    private function protect_members_area() {
+        if (Auth::guest()) {
+            redirect(url('/login'));
+        }
     }
 }

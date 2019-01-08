@@ -18,8 +18,62 @@ img.shadow {
 }
 
 /* ------------------------ *\
+	Custom Buttons
+\* ------------------------ */
+
+.upload_file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.upload_file + label {
+	margin-top: 1em;
+	font-size: 1em;
+    font-weight: 400;
+    color: white;
+    padding: 4px 24px;
+    background-color: #f64747;
+   	text-transform: uppercase;
+   	letter-spacing: 0.1em;
+   	-webkit-box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.5); 
+	box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.5);
+	transition: 0.2s all;
+	-webkit-transition: 0.2s all;
+}
+
+.upload_file + label:hover {
+	cursor: pointer;
+	background-color: #c43838;
+}
+
+.upload_file + label:active {
+	transform: translateY(3px);
+	-webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.5); 
+	box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.5);
+}
+
+/* ------------------------ *\
 	Custom Text
 \* ------------------------ */
+
+.sort_by_label {
+	width: 25%; 
+	display: inline-block; 
+	float: right; 
+	text-align: right; 
+	margin-right: 8px; 
+	margin-top: 0.5em;
+}
+
+.sort_by_select {
+	width: 35%;
+	display: inline-block;
+	float: right;
+}
 
 #main-banner-subtitle {
 	font-size: 16px;
@@ -38,7 +92,7 @@ img.shadow {
 	color: white;
 }
 
-.card-footer > a {
+.card-footer > .footer-button {
 	color: white;
 	background-color: #d82a4e;
 	padding: 4px 16px;
@@ -101,9 +155,35 @@ img.shadow {
 	box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.5);
 }
 
+@media only screen and (min-width: 575px) and (max-width: 992px) {
+	.sort_by_label {
+		width: 25%; 
+		display: inline-block; 
+		float: right; 
+		text-align: right; 
+		margin-right: 8px; 
+		margin-top: 0.5em;
+	}
+
+	.sort_by_select {
+		width: 55%;
+		display: inline-block;
+		float: right;
+	}
+}
+
 @media only screen and (max-width: 575px) {
 	.banner-title {
 		margin-top: 0px;
+	}
+
+	.sort_by_label {
+		width: 20%;
+		text-align: left; 
+	}
+
+	.sort_by_select {
+		width: 75%;
 	}
 }
 
@@ -111,11 +191,27 @@ img.shadow {
 	Custom Divs
 \* ------------------------ */
 
+.profile-box {
+	background-color: hsl(0, 0%, 95%);
+	padding: 16px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 2px 12px -4px rgba(0,0,0,0.5); 
+	box-shadow: 0px 2px 12px -4px rgba(0,0,0,0.5);
+}
+
+.project-board-search-box {
+	background: hsl(0, 0%, 95%);
+	padding: 16px;
+	margin: 0px;
+}
+
 .icon-box > i {
 	font-size: 64px;
 }
 
 .image-box {
+	margin-top: 16px;
+	margin-bottom: 16px;
 	background: white;
 	-webkit-box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.2); 
 	box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.2);
@@ -125,6 +221,7 @@ img.shadow {
 	width: 100%;
 	height: 175px;
 	background-size: cover;
+	background-position: center;
 }
 
 .image-box > .image-box-info {
