@@ -9,6 +9,8 @@ use Auth;
 use App\User;
 
 use App\Custom\UploadHelper;
+use App\Custom\BlogPostHelper;
+use App\Custom\ProjectBoardHelper;
 
 class MembersController extends Controller
 {
@@ -19,8 +21,16 @@ class MembersController extends Controller
         $page_header = "Dashboard";
         $page_title = $page_header;
 
+        // Get latest posts
+        $post_helper = new BlogPostHelper();
+        $posts = $post_helper->get_all_with_pagination(3);
+
+        // Get project boards
+        $project_board_helper = new ProjectBoardHelper;
+        $boards = $project_board_helper->get_all_with_pagination(4);
+
         // Return view
-        return view('members.dashboard')->with('page_header', $page_header)->with('page_title', $page_title);
+        return view('members.dashboard')->with('page_header', $page_header)->with('page_title', $page_title)->with('posts', $posts)->with('boards', $boards);
     }
 
     public function edit_profile($user_id) {

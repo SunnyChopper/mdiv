@@ -68,14 +68,14 @@ class ProjectBoardHelper {
 	}
 
 	public function get_all() {
-		return ProjectBoard::where('is_active', 1)->get();
+		return ProjectBoard::where('is_active', 1)->orderBy('created_at', 'DESC')->get();
 	}
 
 	public function get_all_with_pagination($pagination) {
-		return ProjectBoard::where('is_active', 1)->paginate($pagination);
+		return ProjectBoard::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate($pagination);
 	}
 
 	public function get_all_from_user($user_id) {
-		return ProjectBoard::where('post_user_id', $user_id)->where('is_active', 1)->get();
+		return ProjectBoard::where('post_user_id', $user_id)->where('is_active', 1)->orderBy('created_at', 'DESC')->get();
 	}
 }

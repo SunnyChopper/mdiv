@@ -17,7 +17,8 @@
 						{{ csrf_field() }}
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<h5 class="text-center">Join Others in Getting Exclusive Email Content</h5>
+								<h5 class="text-center">Join Others in Getting Exclusive Guides, Advice, and Tips</h5>
+								<p class="text-center mb-0">Interested in growing your online business? Join others who have made the commitment in getting the latest how-to's, guides, and advice on becoming a better online entrepreneur.</p> 
 								<hr />
 							</div>
 
@@ -57,7 +58,8 @@
 						{{ csrf_field() }}
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<h5 class="text-center">Join Others in Getting Exclusive Email Content</h5>
+								<h5 class="text-center">Join Others in Getting Exclusive Guides, Advice, and Tips</h5>
+								<p class="text-center mb-0">Interested in growing your online business? Join others who have made the commitment in getting the latest how-to's, guides, and advice on becoming a better online entrepreneur.</p> 
 								<hr />
 							</div>
 

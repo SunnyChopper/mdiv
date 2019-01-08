@@ -52,5 +52,6 @@ Route::post('/members/project-board/create', 'ProjectBoardController@create');
 Route::get('/members/project-board/my', 'ProjectBoardController@my_posts');
 Route::get('/members/project-board/edit/{post_id}', 'ProjectBoardController@edit_post');
 Route::post('/members/project-board/update', 'ProjectBoardController@update');
+Route::post('/members/project-board/delete', 'ProjectBoardController@delete');
 
 Auth::routes();

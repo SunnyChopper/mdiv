@@ -70,7 +70,7 @@ class ProjectBoardController extends Controller
 
     public function delete(Request $data) {
     	// Get ID and delete
-    	$project_board_helper = new ProjectBoardHelper($data->post_id);
+    	$project_board_helper = new ProjectBoardHelper($data->board_id);
     	$project_board_helper->delete();
 
     	// Return to tool dashboard
@@ -82,7 +82,7 @@ class ProjectBoardController extends Controller
 
     	// Get posts
     	$project_board_helper = new ProjectBoardHelper();
-    	$posts = $project_board_helper->get_all_with_pagination(25);
+    	$posts = $project_board_helper->get_all_with_pagination(24);
 
     	// Dynamic page elements
     	$page_header = "ProjectBoard";
@@ -104,10 +104,10 @@ class ProjectBoardController extends Controller
     	$page_title = $page_header;
 
     	// SEO Data
-    	// $seo_data = array(
-    	// 	"description" => strip_tags($post->description),
-    	// 	"image_url" => $post->featured_image_url
-    	// );
+    	$seo_data = array(
+    		"description" => strip_tags($post->description),
+    		"image_url" => $post->featured_image_url
+    	);
 
     	// Return view
     	return view('members.project-board.view-post')->with('page_title', $page_title)->with('page_header', $page_header)->with('post', $post);

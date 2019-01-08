@@ -41,6 +41,18 @@
 							@if($user->youtube_link != "")
 								<a href="{{ $user->youtube_link }}" class="btn btn-primary mb-8-mobile">YouTube</a>
 							@endif
+
+							@if($user->github_link != "")
+								<a href="{{ $user->github_link }}" class="btn btn-primary mb-8-mobile">Github</a>
+							@endif
+
+							@if($user->dribbble_link != "")
+								<a href="{{ $user->dribbble_link }}" class="btn btn-primary mb-8-mobile">Dribbble</a>
+							@endif
+
+							@if($user->website_link != "")
+								<a href="{{ $user->website_link }}" class="btn btn-primary mb-8-mobile">Website</a>
+							@endif
 						</div>
 					</div>
 				</div>

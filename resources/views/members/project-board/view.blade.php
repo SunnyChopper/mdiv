@@ -31,70 +31,23 @@
 		</div> --}}
 
 		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="image-box">
-					<div class="image-box-image set-bg" data-setbg="http://insidebusinessonline.com/wp-content/uploads/2018/07/rocket.jpg"></div>
-					<div class="image-box-info">
-						<h5 class="text-center mb-0">Bottled Rockets ECommerce Shop</h5>
-						<p class="text-center"><small><b>Category: </b>E-commerce</small></p>
-						<a href="/members/project-board/view/1" class="btn btn-primary centered">View Project</a>
+			@foreach($posts as $post)
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					<div class="image-box">
+						<div class="image-box-image set-bg" data-setbg="{{ $post->featured_image_url }}"></div>
+						<div class="image-box-info">
+							<h5 class="text-center mb-0">{{ $post->title }}</h5>
+							<p class="text-center"><small><b>Category: </b>{{ $post->category }}</small></p>
+							<a href="/members/project-board/view/{{ $post->id }}" class="btn btn-primary centered">View Project</a>
+						</div>
 					</div>
 				</div>
-			</div>
+			@endforeach
+		</div>
 
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="image-box">
-					<div class="image-box-image set-bg" data-setbg="https://defendernetwork.com/wp-content/uploads/2017/06/page_5_social_media.jpg"></div>
-					<div class="image-box-info">
-						<h5 class="text-center mb-0">AI Powered Social Media Marketing</h5>
-						<p class="text-center"><small><b>Category: </b>Digital Marketing</small></p>
-						<a href="/members/project-board/view/1" class="btn btn-primary centered">View Project</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="image-box">
-					<div class="image-box-image set-bg" data-setbg="https://martechtoday.com/wp-content/uploads/2018/08/crm-concept-table-charts-ss-1920_cjnnna.jpg"></div>
-					<div class="image-box-info">
-						<h5 class="text-center mb-0">CRM Software for Mobile Repair Businesses</h5>
-						<p class="text-center"><small><b>Category: </b>Software</small></p>
-						<a href="/members/project-board/view/1" class="btn btn-primary centered">View Project</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="image-box">
-					<div class="image-box-image set-bg" data-setbg="https://bitcoinist.com/wp-content/uploads/2018/05/top-bitcoin-instagram-accounts-to-follow.jpg"></div>
-					<div class="image-box-info">
-						<h5 class="text-center mb-0">Instagram Influencer Network Website</h5>
-						<p class="text-center"><small><b>Category: </b>Social Media</small></p>
-						<a href="/members/project-board/view/1" class="btn btn-primary centered">View Project</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="image-box">
-					<div class="image-box-image set-bg" data-setbg="https://www.vgr.com/wp-content/uploads/2018/10/fortnite-mythic-cloaked-star-ninja-x817.jpg"></div>
-					<div class="image-box-info">
-						<h5 class="text-center mb-0">Fortnite Mobile Community App</h5>
-						<p class="text-center"><small><b>Category: </b>Software</small></p>
-						<a href="/members/project-board/view/1" class="btn btn-primary centered">View Project</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="image-box">
-					<div class="image-box-image set-bg" data-setbg="http://hiphopspeakeasy.com/wp-content/uploads/2016/11/soundcloud-logo-1.jpg"></div>
-					<div class="image-box-info">
-						<h5 class="text-center mb-0">SoundCloud Extension Plugin for Chrome</h5>
-						<p class="text-center"><small><b>Category: </b>Software</small></p>
-						<a href="/members/project-board/view/1" class="btn btn-primary centered">View Project</a>
-					</div>
-				</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				{{ $posts->links() }}
 			</div>
 		</div>
 	</div>
