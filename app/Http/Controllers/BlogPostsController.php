@@ -18,6 +18,7 @@ class BlogPostsController extends Controller
     public function create(Request $data) {
         // Get data and create
     	$blog_post_helper = new BlogPostHelper();
+
     	$post_data = array(
     		"author_id" => Auth::id(),
     		"title" => $data->title,
@@ -25,6 +26,12 @@ class BlogPostsController extends Controller
     		"slug" => $data->slug,
     		"featured_image_url" => $data->featured_image_url
     	);
+
+        // Check if draft or published
+        if ($data->submit_button == "Create Draft") {
+            $post_data["is_active"] = 2;
+        }
+
     	$blog_post_helper->create($post_data);
 
         // Redirect to admin view
@@ -54,6 +61,14 @@ class BlogPostsController extends Controller
     		"slug" => $data->slug,
     		"featured_image_url" => $data->featured_image_url
     	);
+
+        // Check whether draft
+        if (($data->submit_button == "Update Draft") || ($data->submit_button == "Create into Draft")) {
+            $post_data["is_active"] = 2;
+        } else {
+            $post_data["is_active"] = 1;
+        }
+
     	$blog_post_helper->update($post_data);
 
         // Redirect to admin view
@@ -79,7 +94,7 @@ class BlogPostsController extends Controller
 
         // Get posts
         $blog_post_helper = new BlogPostHelper();
-        $posts = $blog_post_helper->get_all();
+        $posts = $blog_post_helper->get_all_from_author(Auth::user()->id);
 
         // Return view
         return view('admin.posts.view')->with('page_header', $page_header)->with('posts', $posts);
