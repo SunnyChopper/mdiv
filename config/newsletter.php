@@ -34,6 +34,10 @@ return [
              */
             'id' => '6eabd069c9',
         ],
+
+        'marketing-course' => [
+            'id' => '7806b53fb0'
+        ]
     ],
 
     /*

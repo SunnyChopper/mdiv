@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
 use App\PublicCourseEnrollment;
+use Newsletter;
+use App\User;
 
 class PublicCourseEnrollmentsController extends Controller
 {
@@ -13,6 +15,9 @@ class PublicCourseEnrollmentsController extends Controller
     	$enrollment->course_id = $public_course_id;
     	$enrollment->user_id = Auth::id();
     	$enrollment->save();
+
+        $user = User::find(Auth::id());
+        Newsletter::subscribe($user->email, ['FNAME' => $user->first_name, 'LNAME' => $user->last_name], 'marketing-course');
 
     	return redirect(url('/members/public-courses/view/' . $public_course_id));
     }
