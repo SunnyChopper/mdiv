@@ -8,7 +8,7 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<h4 class="mb-32"><a href="{{ url('/members/public-courses/' . $video->course_id . '/videos') }}"><i class="fas fa-arrow-left"></i> View all course videos</a></h4>
 				<div class="videoWrapper">
-					<iframe width="560" height="349" src="http://www.youtube.com/embed/{{ $video->video_url }}?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="349" src="https://www.youtube.com/embed/{{ $video->video_url }}?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
 				</div>
 
 				<h4 class="mt-32">{{ $video->title }}</h4>
