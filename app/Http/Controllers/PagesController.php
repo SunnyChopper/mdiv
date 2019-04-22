@@ -10,6 +10,7 @@ use App\Custom\ProjectBoardHelper;
 use Mail;
 
 use App\User;
+use App\PublicCourseEnrollment;
 
 class PagesController extends Controller
 {
@@ -59,7 +60,10 @@ class PagesController extends Controller
         $project_board_helper = new ProjectBoardHelper();
         $boards = $project_board_helper->get_all_from_user($user_id);
 
+        // Get public course enrollments
+        $enrollments = PublicCourseEnrollment::where('user_id', $user_id)->get();
+
         // Return view
-        return view('pages.profile')->with('page_title', $page_title)->with('page_header', $page_header)->with('user', $user)->with('boards', $boards);
+        return view('pages.profile')->with('page_title', $page_title)->with('page_header', $page_header)->with('user', $user)->with('boards', $boards)->with('enrollments', $enrollments);
     }
 }

@@ -5,7 +5,7 @@
 
 	<div class="container pt-64 pb-64">
 		<div class="row justify-content-center">
-			<div class="col-lg-7 col-md-8 col-sm-10 col-12">
+			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-10 col-12">
 				<form action="/admin/public-courses/videos/create" method="POST" id="create_public_course_video_form">
 					{{ csrf_field() }}
 					<input type="hidden" name="course_id" value="{{ $course->id }}">

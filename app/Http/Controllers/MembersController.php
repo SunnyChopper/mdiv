@@ -8,6 +8,7 @@ use Auth;
 
 use App\User;
 
+use App\Custom\UsersHelper;
 use App\Custom\UploadHelper;
 use App\Custom\BlogPostHelper;
 use App\Custom\ProjectBoardHelper;
@@ -97,6 +98,11 @@ class MembersController extends Controller
     			return redirect()->back();
     		}
     	}
+    }
+
+    public function logout() {
+        UsersHelper::logoutUser();
+        return redirect(url('/'));
     }
 
     /* Private functions */

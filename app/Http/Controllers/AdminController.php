@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Custom\UsersHelper;
 use App\User;
 
 use Auth;
@@ -59,9 +60,18 @@ class AdminController extends Controller
     }
 
     public function dashboard() {
+        if (UsersHelper::isAdmin() == false) {
+            return redirect(url('/admin'));
+        }
+        
         $page_header = "Admin Dashboard";
 
         return view('admin.dashboard')->with('page_header', $page_header);
+    }
+
+    public function logout() {
+        UsersHelper::logoutAdmin();
+        return redirect(url('/'));
     }
 
     /* Private functions */

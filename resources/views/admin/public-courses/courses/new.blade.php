@@ -5,7 +5,7 @@
 
 	<div class="container pt-64 pb-64">
 		<div class="row justify-content-center">
-			<div class="col-lg-7 col-md-8 col-sm-10 col-12">
+			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-10 col-12">
 				<form id="create_course_form" action="/admin/public-courses/create" method="POST">
 					{{ csrf_field() }}
 					<div class="gray-box">

@@ -34,7 +34,7 @@
 					<a href="/admin/public-courses/{{ $course->id }}/videos/new" class="btn btn-primary centered">Create New Content</a>
 				</div>
 			@else
-				<div class="col-lg-7 col-md-8 col-sm-10 col-12">
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-10 col-12">
 					<div class="gray-box">
 						<h3 class="text-center">No content available.</h3>
 						<p class="text-center">There are no videos added to this public course. Click below to add the first video.</p>

@@ -11,6 +11,7 @@
 					<h3 class="mt-16 mb-0">{{ $user->first_name }} {{ $user->last_name }}</h3>
 					<p>Joined on {{ $user->created_at->format('M jS, Y') }}</p>
 					@if(Auth::id() == $user->id)
+						<p>Points: {{ \App\Custom\UsersHelper::getPoints(Auth::id()) }}</p>
 						<p class="mb-0"><small><a href="/profile/edit/{{ $user->id }}"><i class="fas fa-pencil-alt" style="margin-right: 0.5em;"></i> Edit Profile</a></small></p>
 					@endif
 
@@ -55,10 +56,6 @@
 
 			<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12 mt-32-mobile">
 				<div class="gray-box">
-					@if(count($boards) == 0)
-						<p class="mb-0 text-center">No activity yet...</p>
-					@endif
-
 					@if(count($boards) > 0)
 						<h4>Project Board</h4>
 						<div class="row">

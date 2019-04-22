@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -25,7 +26,13 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/members/dashboard';
+    protected function redirectTo() {
+        if (Session::has('login_redirect_url')) {
+            return Session::get('login_redirect_url');
+        } else {
+            return '/members/dashboard';
+        }
+    }
 
     /**
      * Create a new controller instance.

@@ -10,11 +10,11 @@
 					<div style="overflow: auto;">
 						<table class="table table-striped">
 							<tr>
-								<th>Title</th>
-								<th>Description</th>
-								<th>Image</th>
-								<th>Video</th>
-								<th></th>
+								<th width="10%">Title</th>
+								<th width="20%">Description</th>
+								<th width="30%">Image</th>
+								<th width="30%">Video</th>
+								<th width="10%"></th>
 							</tr>
 
 							@foreach($courses as $course)
@@ -39,9 +39,9 @@
 								@endif
 
 								<td>
-									<a href="/admin/public-courses/{{ $course->id }}/videos/view" class="btn btn-primary">View Content</a>
-									<a href="/admin/public-courses/edit/{{ $course->id }}" class="btn btn-warning">Edit</a>
-									<button id="{{ $course->id }}" class="btn btn-danger delete_public_course_button">Delete</button>
+									<a href="/admin/public-courses/{{ $course->id }}/videos/view" class="btn btn-primary m-2">View Content</a>
+									<a href="/admin/public-courses/edit/{{ $course->id }}" class="btn btn-warning m-2">Edit</a>
+									<button id="{{ $course->id }}" class="btn btn-danger delete_public_course_button m-2">Delete</button>
 								</td>
 							</tr>
 							@endforeach
@@ -51,7 +51,7 @@
 					<a href="/admin/public-courses/new" class="btn btn-primary centered mt-16">Create New Public Course</a>
 				</div>
 			@else
-				<div class="col-lg-7 col-md-8 col-sm-10 col-12">
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-10 col-12">
 					<div class="gray-box">
 						<h3 class="text-center">No public courses available.</h3>
 						<p class="text-center">Click below to get started on creating the first public course.</p>

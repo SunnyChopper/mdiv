@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use App\PublicCourseForum;
 
@@ -10,7 +11,7 @@ class PublicCourseForumsController extends Controller
     public function create(Request $data) {
     	$forum = new PublicCourseForum;
     	$forum->course_id = $data->course_id;
-    	$forum->user_id = $data->user_id;
+    	$forum->user_id = Auth::id();
     	$forum->title = $data->title;
     	$forum->description = $data->description;
     	$forum->save();

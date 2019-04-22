@@ -5,7 +5,7 @@
 
 	<div class="container pt-64 pb-64">
 		<div class="row justify-content-center">
-			<div class="col-lg-7 col-md-8 col-sm-10 col-12">
+			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-10 col-12">
 				<form id="edit_course_form" action="/admin/public-courses/update" method="POST">
 					{{ csrf_field() }}
 					<input type="hidden" name="public_course_id" value="{{ $course->id }}">
